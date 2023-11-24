@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicPlayer</title>
+    <!-- Important -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="card" id="card" data-aos="zoom-out">
+        <div class="poster">
+            <img src="MoneyHiestImage.jpg" alt="" id="image">
+            <!-- Details -->
+            <div class="details">
+                <h2 style="color: rgb(139, 71, 34)" id="title">Story of My Life</h2>
+                <h2 style="color: rgba(92, 81, 51, 0.822)" id="artist">~Artist</h2>
+
+
+            </div>
+            <!-- Progress Bar -->
+            <audio class="music" id="music" src="MoneyHiest.mp3" controls></audio>
+            <div class="progress-container" id="progressBar">
+                <div class="progress" id="progress"></div>
+                <div class="duration-wrapper">
+                    <span id="songTime">0:00</span>
+                    <span id="duration">0:30</span>
+                </div>
+            </div>
+            <!-- Buttons -->
+            <div class="buttons">
+                <i class="fas fa-backward" id="prev"></i>
+                <i class="fas fa-play" id="play"></i>
+                <i class="fas fa-forward" id="next"></i>
+
+            </div>
+
+        </div>
+        <!-- Icons -->
+        <div class="icon">
+            <i class="fas fa-heart" id="like"></i>
+            <i class="fas fa-heart-broken" id="dislike"></i>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+
+        delay: 200, // values from 0 to 3000, with step 50ms
+        duration: 1500, // values from 0 to 3000, with step 50ms
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+
+    });
+    
+</script>
+
+</html>
